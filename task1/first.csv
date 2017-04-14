@@ -1,0 +1,16 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE "worker"(id INTEGER PRIMARY KEY, firstname TEXT, lastname TEXT, email TEXT, birthday DATA, height INTEGER, Weight INTEGER, department_id INTEGER);
+INSERT INTO "worker" VALUES(1,'NATALIA','NEKRASHEVICH','NN@gmail.com',NULL,168,55,3);
+INSERT INTO "worker" VALUES(2,'Fedor','Cheb','FC@gmail.com',NULL,178,65,NULL);
+INSERT INTO "worker" VALUES(3,'Ira','Pashkevich','IP@gmail.com',NULL,178,65,4);
+INSERT INTO "worker" VALUES(4,'Alex','Meleshchenko','alex.meleshchenko@mail.com',NULL,185,55,5);
+INSERT INTO "worker" VALUES(5,'Kolya','Petrov','petrov@mail.com',NULL,165,80,1);
+INSERT INTO "worker" VALUES(6,'Kristina','Boricheva','BorichevaK@gmail.com',NULL,170,70,2);
+CREATE TABLE department(id INTEGER PRIMARY KEY, dep_name  TEXT);
+INSERT INTO "department" VALUES(1,'first');
+INSERT INTO "department" VALUES(2,'second');
+INSERT INTO "department" VALUES(3,'third');
+INSERT INTO "department" VALUES(4,'fourth');
+INSERT INTO "department" VALUES(5,'fifth');
+COMMIT;
